@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { CSSProperties } from "react";
 
 export default function MiniCalendar({ calendarInstance }: any) {
   const [current, setCurrent] = useState(new Date());
@@ -67,7 +66,16 @@ export default function MiniCalendar({ calendarInstance }: any) {
 
       <div style={grid}>
         {["S","M","T","W","T","F","S"].map((d) => (
-          <div key={d} style={dayHeader}>{d}</div>
+          <div 
+            key={d} 
+            style={{
+              fontSize: "12px",
+              fontWeight: 600,
+              textAlign: "center",   // ⬅ FIXED HERE
+            }}
+          >
+            {d}
+          </div>
         ))}
 
         {cells.map((day, i) => {
@@ -82,6 +90,7 @@ export default function MiniCalendar({ calendarInstance }: any) {
               onClick={() => jumpToDate(day as number)}
               style={{
                 ...dayCell,
+                textAlign: "center",    // ⬅ FIXED HERE
                 background: isToday ? "#1a73e8" : "",
                 color: isToday ? "white" : "#333",
               }}
@@ -97,20 +106,20 @@ export default function MiniCalendar({ calendarInstance }: any) {
 
 /* ---------------------- STYLES ---------------------- */
 
-const box: CSSProperties = {
+const box = {
   padding: "10px",
   background: "white",
   borderRadius: "10px",
   border: "1px solid #e5e7eb",
 };
 
-const header: CSSProperties = {
+const header = {
   display: "flex",
   justifyContent: "space-between",
   marginBottom: "10px",
 };
 
-const arrow: CSSProperties = {
+const arrow = {
   padding: "4px 8px",
   background: "#f1f3f4",
   border: "1px solid #dadce0",
@@ -118,20 +127,13 @@ const arrow: CSSProperties = {
   cursor: "pointer",
 };
 
-const grid: CSSProperties = {
+const grid = {
   display: "grid",
   gridTemplateColumns: "repeat(7, 1fr)",
   gap: "5px",
 };
 
-const dayHeader: CSSProperties = {
-  fontSize: "12px",
-  fontWeight: 600,
-  textAlign: "center" as const,   // ← FIXED HERE
-};
-
-const dayCell: CSSProperties = {
-  textAlign: "center" as const,   // ← FIXED HERE
+const dayCell = {
   padding: "4px 0",
   borderRadius: "6px",
   cursor: "pointer",
