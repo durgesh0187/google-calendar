@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { CSSProperties } from "react";
+
 
 export default function MiniCalendar({ calendarInstance }: any) {
   const [current, setCurrent] = useState(new Date());
@@ -126,7 +128,7 @@ const grid = {
 //   fontWeight: 600,
 //   textAlign: "center",
 // };
-const dayHeader: React.CSSProperties = {
+const dayHeader: CSSProperties = {
   fontSize: "16px",
   fontWeight: 600,
   textAlign: "center",
