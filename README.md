@@ -211,4 +211,3 @@ DATABASE_URL="file:./dev.db"
 👨‍💻 Author
 Durgesh Kumar
 Fullstack Developer — React + Next.js + Node + Prisma
->>>>>>> 2cf8df0b4c559daefca1529a5bcb9cc6f9db4d9e
