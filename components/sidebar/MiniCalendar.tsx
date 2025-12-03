@@ -95,7 +95,7 @@ export default function MiniCalendar({ calendarInstance }: any) {
   );
 }
 
-/* ---------------------- STYLES (Fully Typed) ---------------------- */
+/* ---------------------- STYLES ---------------------- */
 
 const box: CSSProperties = {
   padding: "10px",
@@ -127,11 +127,11 @@ const grid: CSSProperties = {
 const dayHeader: CSSProperties = {
   fontSize: "12px",
   fontWeight: 600,
-  textAlign: "center",
+  textAlign: "center" as const,   // ← FIXED HERE
 };
 
 const dayCell: CSSProperties = {
-  textAlign: "center",
+  textAlign: "center" as const,   // ← FIXED HERE
   padding: "4px 0",
   borderRadius: "6px",
   cursor: "pointer",
