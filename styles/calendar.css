@@ -1,0 +1,81 @@
+/* GOOGLE CALENDAR FINAL FIXED LAYOUT */
+
+/* Center calendar container */
+#calendar {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: white;
+}
+
+/* Strong grid lines like Google Calendar */
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border: 1px solid #e5e7eb !important;
+}
+
+.fc-scrollgrid {
+  border: none !important;
+}
+
+/* Clean header title */
+.fc-toolbar-title {
+  font-size: 26px !important;
+  font-weight: 600 !important;
+  color: #202124 !important;
+}
+
+/* Fix header spacing */
+.fc-toolbar.fc-header-toolbar {
+  margin-bottom: 20px !important;
+  padding: 0 10px !important;
+}
+
+/* Today button */
+.fc-button-primary {
+  background: #e8f0fe !important;
+  color: #1a73e8 !important;
+  border: 1px solid #d2e3fc !important;
+  text-transform: capitalize !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+}
+
+/* Navigation arrows */
+.fc-prev-button,
+.fc-next-button {
+  background: #f1f3f4 !important;
+  color: #1a73e8 !important;
+  border-radius: 6px !important;
+}
+.fc-prev-button:hover,
+.fc-next-button:hover {
+  background: #e8eaed !important;
+}
+
+/* Cell hover */
+.fc-daygrid-day:hover {
+  background: #f8f9fa !important;
+}
+
+/* Today highlight */
+.fc-day-today {
+  background: #fff7d4 !important;
+}
+
+/* Fix day number spacing */
+.fc-daygrid-day-number {
+  padding: 5px 8px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+/* Event styling */
+.fc-event {
+  background: #1a73e8 !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 2px 4px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: white !important;
+}

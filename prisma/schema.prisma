@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Event {
+  id    String @id @default(cuid())
+  title String
+  start DateTime
+  end   DateTime
+  color String @default("#1a73e8")
+}
