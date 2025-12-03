@@ -121,11 +121,17 @@ const grid = {
   gap: "5px",
 };
 
-const dayHeader = {
-  fontSize: "12px",
+// const dayHeader = {
+//   fontSize: "12px",
+//   fontWeight: 600,
+//   textAlign: "center",
+// };
+const dayHeader: React.CSSProperties = {
+  fontSize: "16px",
   fontWeight: 600,
   textAlign: "center",
 };
+
 
 const dayCell = {
   textAlign: "center",
